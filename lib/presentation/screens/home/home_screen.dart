@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:proyecto12_widget_app/menu/menu_items.dart';
+import 'package:proyecto12_widget_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  //Propiedad estatica para usar en el Go Router (app_router.dart):
+  static const String name = 'home_screen'; //Recuerda se declara 'static' para no crear instancias de la clase HomeScreen 
+  
   const HomeScreen({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +47,7 @@ class _CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     final theme = Theme.of(context).colorScheme;
 
     return ListTile(
@@ -50,7 +56,7 @@ class _CustomListTile extends StatelessWidget {
       subtitle: Text(item.subTitle),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: theme.primary,),
       onTap: (){
-        //Opcion 1:
+        //Opcion 1 (Usando Flutter):
         /* Navigator.of(context).push(
           MaterialPageRoute(
             builder: (ctx) => const ButtonsScreen() )); */
@@ -59,7 +65,10 @@ class _CustomListTile extends StatelessWidget {
         //Navigator.pushNamed(context, item.link);
 
         //Opcion 3 (Usando Go Router):
-        context.push(item.link);
+        //context.push(item.link);
+
+        //Opcion 4:
+        context.pushNamed(CardsScreen.name);
       },
     );
   }
