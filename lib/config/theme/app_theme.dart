@@ -25,6 +25,9 @@ class AppTheme {
     colorSchemeSeed: colorList[selectedColor],
     appBarTheme: const AppBarTheme(
       centerTitle: false
-    )
+    ),
+    /* listTileTheme: const ListTileThemeData(
+      tileColor: Colors.lightBlue,
+    ) */
   );
 }
