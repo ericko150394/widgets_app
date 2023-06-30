@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:proyecto12_widget_app/menu/menu_items.dart';
-import 'package:proyecto12_widget_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   //Propiedad estatica para usar en el Go Router (app_router.dart):
@@ -65,10 +64,10 @@ class _CustomListTile extends StatelessWidget {
         //Navigator.pushNamed(context, item.link);
 
         //Opcion 3 (Usando Go Router):
-        //context.push(item.link);
+        context.push(item.link);
 
         //Opcion 4:
-        context.pushNamed(CardsScreen.name);
+        //context.pushNamed(CardsScreen.name);
       },
     );
   }
