@@ -14,7 +14,14 @@ class MenuItem {
   });
 }
 
-const appItems = <MenuItem>[//Listado de MenuItem
+const appItems = <MenuItem>[//Listado de MenuIte
+  MenuItem(
+    title: 'Riverpod Counter',
+    subTitle: 'Introducción a riverpod',
+    link: '/counter_river',
+    icon: Icons.numbers,
+  ),
+
   MenuItem(
     title: 'Botones',
     subTitle: 'Muchos botones en flutter',
@@ -69,5 +76,12 @@ const appItems = <MenuItem>[//Listado de MenuItem
     subTitle: 'Listas infinitas y pull to refresh',
     link: '/infinite',
     icon: Icons.swipe_vertical,
+  ),
+
+  MenuItem(
+    title: 'Tema de la aplicación',
+    subTitle: 'Intercambiar entre tema diurno y nocturno',
+    link: '/theme_app',
+    icon: Icons.color_lens,
   ),
 ];

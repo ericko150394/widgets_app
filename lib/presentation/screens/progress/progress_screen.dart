@@ -11,15 +11,13 @@ class ProgressScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Progress Indicators'),
       ),
-      body: _ProgressView(),
+      body: const _ProgressView(),
     );
   }
 }
 
 class _ProgressView extends StatelessWidget {
-  const _ProgressView({
-    super.key,
-  });
+  const _ProgressView();
 
   @override
   Widget build(BuildContext context) {

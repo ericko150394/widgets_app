@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:proyecto12_widget_app/menu/menu_items.dart';
+import 'package:proyecto12_widget_app/presentation/widgets/side_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   //Propiedad estatica para usar en el Go Router (app_router.dart):
@@ -11,13 +12,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final scaffoldKey =  GlobalKey<ScaffoldState>(); //Referencia el scaffold que abre nuestro drawer(menu lateral)
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         title: const Text("Flutter + Material 3"),
         centerTitle: false,
         actions: const [],
       ),
       body: const _HomeView(),
+      drawer: SideMenu(scaffoldKey: scaffoldKey,),
     );
   }
 }

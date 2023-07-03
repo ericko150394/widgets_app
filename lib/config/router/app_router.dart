@@ -1,16 +1,12 @@
 import 'package:go_router/go_router.dart';
-import 'package:proyecto12_widget_app/presentation/screens/animated/animated_screen.dart';
-import 'package:proyecto12_widget_app/presentation/screens/app_tutorial/app_tutorial.dart';
-import 'package:proyecto12_widget_app/presentation/screens/infinite_scroll/infinite_scroll.dart';
-import 'package:proyecto12_widget_app/presentation/screens/progress/progress_screen.dart';
 import 'package:proyecto12_widget_app/presentation/screens/screens.dart';
-import 'package:proyecto12_widget_app/presentation/screens/snackbar/snackbar_screen.dart';
-import 'package:proyecto12_widget_app/presentation/screens/ui_controls/ui_controls_screen.dart';
+import 'package:proyecto12_widget_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
+
     GoRoute(
       path: '/',
       name: HomeScreen.name, //El nombre del objeto static de tu clase HomeScreen
@@ -63,6 +59,18 @@ final appRouter = GoRouter(
       path: '/infinite',
       name: InfiniteScrollScreen.name,
       builder: (context, state) => const InfiniteScrollScreen(),
+    ),
+
+    GoRoute(
+      path: '/counter_river',
+      name: CounterScreen.name,
+      builder: (context, state) => const CounterScreen(),
+    ),
+
+    GoRoute(
+      path: '/theme_app',
+      name: ThemeChangerScreen.name,
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );

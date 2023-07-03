@@ -47,13 +47,13 @@ class _UiControlsViewState extends State<_UiControlsView> {
         
         
         ExpansionTile(
-          title: Text('Vehículo de Transporte'),
+          title: const Text('Vehículo de Transporte'),
           subtitle: Text('$selectedRadio'),
           children: [
             //Estos pueden ir fuera del expansiónTile:
             RadioListTile(
-              title: Text('By Car'),
-              subtitle: Text('Viajar por carro'),
+              title: const Text('By Car'),
+              subtitle: const Text('Viajar por carro'),
               value: Radio
                   .car, //Definimos un valor, para a futuro enlazar el valor seleccionado al actual
               groupValue:
@@ -63,8 +63,8 @@ class _UiControlsViewState extends State<_UiControlsView> {
               }),
             ),
             RadioListTile(
-              title: Text('By Plane'),
-              subtitle: Text('Viajar por Avión'),
+              title: const Text('By Plane'),
+              subtitle: const Text('Viajar por Avión'),
               value: Radio
                   .plane, //Definimos un valor, para a futuro enlazar el valor seleccionado al actual
               groupValue:
@@ -74,8 +74,8 @@ class _UiControlsViewState extends State<_UiControlsView> {
               }),
             ),
             RadioListTile(
-              title: Text('By Submarine'),
-              subtitle: Text('Viajar por submarino'),
+              title: const Text('By Submarine'),
+              subtitle: const Text('Viajar por submarino'),
               value: Radio
                   .submarine, //Definimos un valor, para a futuro enlazar el valor seleccionado al actual
               groupValue:
@@ -85,8 +85,8 @@ class _UiControlsViewState extends State<_UiControlsView> {
               }),
             ),
             RadioListTile(
-              title: Text('By Train'),
-              subtitle: Text('Viajar por tren'),
+              title: const Text('By Train'),
+              subtitle: const Text('Viajar por tren'),
               value: Radio
                   .train, //Definimos un valor, para a futuro enlazar el valor seleccionado al actual
               groupValue:
@@ -96,8 +96,8 @@ class _UiControlsViewState extends State<_UiControlsView> {
               }),
             ),
             RadioListTile(
-              title: Text('By Boat'),
-              subtitle: Text('Viajar por bote'),
+              title: const Text('By Boat'),
+              subtitle: const Text('Viajar por bote'),
               value: Radio
                   .boat, //Definimos un valor, para a futuro enlazar el valor seleccionado al actual
               groupValue:
